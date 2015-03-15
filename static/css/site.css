@@ -10,6 +10,9 @@ h2 {
     line-height:120%;
     margin-bottom:25px;
 }
+h2 a {
+    color: inherit;
+}
 h3 {
     font-family:'Chunkfive', Georgia, serif;
     font-size:22px;
