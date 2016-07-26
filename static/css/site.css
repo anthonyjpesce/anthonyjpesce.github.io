@@ -11,12 +11,12 @@ h1 {
     line-height: 120%;    
 }
 h3 {
-    font-family: Raleway-Regular;
+    font-family: 'Raleway', sans-serif;
     font-size: 18px;
     color: #424242;
 }
 p {
-    font-family: Raleway-Light;
+    font-family: 'Raleway Light', sans-serif;
     font-size: 16px;
     color: #424242;
     line-height: 28px;
