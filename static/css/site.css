@@ -1,63 +1,36 @@
+.highlight {
+    background: #F7FF97;
+}
+.highlight-blue {
+    background: #70A3E7;
+}
 h1 {
-    font-size:80px;
-    line-height:120%;
-    margin-bottom:20px;
-    font-family:'Chunkfive', Georgia, serif;
-}
-h2 {
-    font-family:'Chunkfive', Georgia, serif;
-    font-size:45px;
-    line-height:120%;
-    margin-bottom:25px;
-}
-h2 a {
-    color: inherit;
+    font-family: 'Alfa Slab One', serif;
+    font-size: 37px;
+    color: #424242;
+    line-height: 120%;    
 }
 h3 {
-    font-family:'Chunkfive', Georgia, serif;
-    font-size:22px;
-    line-height:120%;
-    margin-bottom:10px;
+    font-family: Raleway-Regular;
+    font-size: 18px;
+    color: #424242;
 }
-h4 {
-    font-family:'League Gothic';
-    font-size:22px;
+p {
+    font-family: Raleway-Light;
+    font-size: 16px;
+    color: #424242;
+    line-height: 28px;
 }
-footer {
-    background-color:#4C7183;
-    padding:15px 0;
-    font-size:16px;
-    color: #fff;
-}
-.topper {
-    background-color:#4C7183;
-    padding:40px 0;
-    margin-bottom:40px;
-    text-align:center;
-    color: #fff;
-}
-.topper img {
-    width:150px;
-    height:auto;
-    border:3px white solid;
-}
-.topper p {
-    font-size:18px;
-}
-.section {
-    margin-bottom:75px;
-}
-.section img, .old img {
-    max-width:100%;
-    height:auto;
-}
-.section p {
-    font-size:16px;
-}
-.row.old {
-    margin-bottom:60px;
-}
-.old p {
-    font-size:15px;
-    margin-top:8px;
+
+
+/*Left rail - more links:
+weight: 8px, padding-right: 15px*/
+
+/*Border between 3 up: 
+#DFDFDF*/
+
+@media (min-width: 750px) {
+    h1 {
+        font-size: 52px;
+    }
 }
