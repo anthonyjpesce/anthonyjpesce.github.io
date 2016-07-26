@@ -16,7 +16,8 @@ h3 {
     color: #424242;
 }
 p {
-    font-family: 'Raleway Light', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
     font-size: 16px;
     color: #424242;
     line-height: 28px;
