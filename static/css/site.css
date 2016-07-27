@@ -9,6 +9,7 @@ h1 {
     font-size: 37px;
     color: #424242;
     line-height: 120%;    
+    margin-bottom: 5px;
 }
 h3 {
     font-family: 'Raleway', sans-serif;
@@ -22,8 +23,35 @@ p {
     color: #424242;
     line-height: 28px;
 }
-
-
+.topper, .footer {
+    height: 12px;
+    width: 100%;
+    background: #70A3E7;
+}
+.topper {
+    margin-bottom: 40px;
+}
+.footer {
+    margin-top: 40px;
+}
+img.portrait {
+    width: 75px;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 5px;
+}
+img.social {
+    width: 25px;
+    height: auto;
+}
+header {
+    max-width: 550px;
+    margin: 0px auto;
+}
+header p {
+    font-size: 27px;
+}
 /*Left rail - more links:
 weight: 8px, padding-right: 15px*/
 
@@ -33,5 +61,11 @@ weight: 8px, padding-right: 15px*/
 @media (min-width: 750px) {
     h1 {
         font-size: 52px;
+    }
+    .topper {
+        margin-bottom: 60px;
+    }
+    .footer {
+        margin-top: 60px;
     }
 }
