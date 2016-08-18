@@ -16,6 +16,13 @@ h3 {
     font-size: 18px;
     color: #424242;
 }
+h4 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    color: #424242;
+    line-height: 120%;
+    margin: 10px 0;
+}
 p {
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
@@ -48,6 +55,7 @@ img.social {
 header {
     max-width: 550px;
     margin: 0px auto;
+    margin-bottom: 40px;
 }
 header p {
     font-size: 27px;
