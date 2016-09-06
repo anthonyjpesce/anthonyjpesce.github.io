@@ -48,15 +48,34 @@
         </div>
     </div>
     <div class="center">
-        <a class="button button-primary" href="#">Download</a>
-        <a class="button button-primary" href="#">Download</a>
+        <a class="button button-writing" href="#">Writing</a>
+        <a class="button button-code" href="#">Code</a>
     </div>
-    <div class="row center">
-        <ul class="eight columns">
-            <li>foo</li>
-
-        </ul>
+    <div class="container">
+        <div class="row">
+            <ul class="eight columns work-list">
+                <li class="li-code">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                <li class="li-writing">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                <li class="li-code">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                <li class="li-writing">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                <li class="li-code">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                <li class="li-writing">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+            </ul>
+        </div>
     </div>
     <div class="footer"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        $('.button-writing').click(function() {
+            $('.li-code').hide();
+            $('.li-writing').show();
+            return false;
+        });
+        $('.button-code').click(function() {
+            $('.li-writing').hide();
+            $('.li-code').show();
+            return false;
+        });
+    </script>
 </body>
 </html>
