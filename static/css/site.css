@@ -45,15 +45,19 @@ img {
     margin-top: 40px;
 }
 img.portrait {
-    width: 75px;
+    width: 70px;
     height: auto;
     border-radius: 5px;
     display: block;
     margin-bottom: 5px;
 }
 img.social {
-    width: 25px;
+    width: 20px;
+    margin: 0 1px;
     height: auto;
+}
+.portrait-container-desktop:first-child img.social {
+    margin-left:7px;
 }
 header {
     max-width: 550px;
@@ -74,34 +78,15 @@ header p {
 ul {
     list-style-type:none;
 }
-ul.work-list {
-    margin: 20px auto !important;
+#work-list {
+    margin: 20px auto;
     float: none;
-    width: 450px !important;
+    width: 450px;
 }
-ul.work-list li {
+#work-list li {
     padding-left: 14px;
+    border-left: 6px solid #70A3E7;
 }
-.button {
-    padding: 0 20px;
-    font-size: 14px;
-    font-weight: normal;
-    text-transform: none;
-    border: none;
-}
-.button-writing {
-    background-color: rgba(112, 163, 231, 0.4);
-}
-.button-code {
-    background-color: rgba(247, 255, 151, 0.4);
-}
-.li-writing {
-    border-left: 8px solid rgba(112, 163, 231, 0.4);
-}
-.li-code {
-    border-left: 8px solid rgba(247, 255, 151, 0.4);
-}
-
 .portrait-container-desktop {
     float: right;
 }
@@ -127,6 +112,18 @@ ul.work-list li {
 @media (max-width: 600px) {
     h1 {
         line-height: 110%;
+    }
+    #work-list {
+        width: 100%;
+    }
+    #work-list li {
+        padding-left: 10px;
+        border-left: 4px solid #70A3E7;
+    }
+    img.social {
+        width: 23px;
+        height: auto;
+        margin-right: 8px;
     }
     .header p {
         font-size: 25px;
