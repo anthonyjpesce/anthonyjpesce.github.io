@@ -1,0 +1,49 @@
+---
+layout: default
+---
+<div class="container">
+    <header class="row">
+        <div>
+            <div class="portrait-container-desktop">
+                <img class="portrait" src="/static/img/anthony-pesce_crop.jpg" />
+                <a href="http://github.com/{{ site.github_username }}">
+                    <img class="social" src="/static/img/github.png" />
+                </a>
+                <a href="http://twitter.com/{{ site.twitter_username }}">
+                    <img class="social" src="/static/img/twitter.jpg" />
+                </a>
+            </div>
+            <div class="portrait-container-mobile">
+                <img class="portrait" src="{{ site.portrait }}" />
+            </div>
+            <div class="header">
+                <h1>{{ site.title }}</h1>
+                <p>{{ site.short_description }}</p>
+            </div>
+        </div>
+    </header>
+    <div class="row three">
+        {% for project in page.lead_projects %}
+        <div class="one-third column">
+            <img src="{{ project.img }}" />
+            <h4>{{ project.headline }}</h4>
+            <p>{{ project.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<h3 class="center">More Work</h3>
+<div class="container">
+    <div class="row">
+        <ul id="work-list" class="eight columns">
+        {% for project in page.other_projects %}
+            <li>
+            {% if project.img %}
+                <img src="{{ project.img }}" />
+            {% endif %}
+                {{ project.description }}
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>

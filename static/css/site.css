@@ -18,7 +18,7 @@ h3 {
 }
 h4 {
     font-family: 'Raleway', sans-serif;
-    font-size: 26px;
+    font-size: 24px;
     color: #424242;
     line-height: 120%;
     margin: 10px 0;
@@ -55,6 +55,10 @@ img.social {
     width: 20px;
     margin: 0 1px;
     height: auto;
+    display: inline-block;
+}
+.portrait-container-desktop a {
+    display: inline-block;
 }
 .portrait-container-desktop:first-child img.social {
     margin-left:7px;
