@@ -4,6 +4,10 @@
 .highlight-blue {
     background: #70A3E7;
 }
+a {
+    text-decoration: none;
+    color: inherit;
+}
 h1 {
     font-family: 'Alfa Slab One', serif;
     font-size: 37px;
@@ -28,7 +32,7 @@ p {
     font-weight: 300;
     font-size: 16px;
     color: #424242;
-    line-height: 28px;
+    line-height: 150%;
 }
 img {
     max-width: 100%;
@@ -110,6 +114,9 @@ ul {
     }
     .footer {
         margin-top: 60px;
+    }
+    header p {
+        font-size: 25px;
     }
 }
 
