@@ -24,16 +24,20 @@ body {
     padding: 0px;
 }
 .topper .col {
-    padding: 0px;
+    /*padding: 0px;*/
     text-align: center;
 }
 .topper .col-7 {
     padding: 0px;
 }
 ul.index {
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     text-align: left;
     margin: 0px auto;
+}
+ul.list {
+    width: 100%;
 }
 ul.index li {
     margin: 0;
@@ -41,7 +45,7 @@ ul.index li {
 p.lead {
     width: 100%;
     max-width: 600px;
-    margin: 14px auto;
+    margin: 18px auto;
     line-height: 150%;
     text-align: left;
 }
@@ -49,7 +53,7 @@ p.lead a {
     text-decoration: underline;
 }
 p.desc {
-    margin: 14px auto;
+    margin: 34px auto 14px auto;
     line-height: 140%;
     text-align: left;
     font-size: 18px;
@@ -80,16 +84,17 @@ h1 {
     margin: 15px 0 6px 0;
 }
 h2 {
-    color: #424242;
     font-weight: bold;
     line-height: 120%;
     margin: 25px 0;
     font-size: 2.3rem;
 }
+h5 {
+    font-style: italic;
+}
 p {
     font-weight: 300;
     font-size: 18px;
-    color: #424242;
     line-height: 130%;
 }
 img {

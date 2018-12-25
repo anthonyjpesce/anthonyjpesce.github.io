@@ -42,16 +42,16 @@ layout: default
         </div>
     </div>
     <div class="row justify-content-center desc">
-        <div class="col-sm-6 lead">
+        <div class="col-sm-12 col-md-5 col-lg-4">
+            <p class="desc">{{ section.description }}</p>
+        </div>
+        <div class="col-sm-12 col-md-7 col-lg-6 lead">
             <h5>Projects:</h5>
             <ul class="list">
             {% for project in section.work %}
                 <li><a target="_blank" href="{{ project.url }}">{{ project.name }}</a></li>
             {% endfor %}
             </ul>
-        </div>
-        <div class="col-sm-4">
-            <p class="desc">{{ section.description }}</p>
         </div>
     </div>
 {% endfor %}
