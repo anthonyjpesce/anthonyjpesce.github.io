@@ -1,11 +1,14 @@
 ---
 layout: default
 ---
-<div class="container">
-    <header class="row">
-        <div>
-            <div class="portrait-container-desktop">
-                <img class="portrait" src="/static/img/anthony-pesce_crop.jpg" />
+<div class="container topper">
+    <div class="row">
+<!--         <div class="col-7">
+            <img class="topper-img" src="/static/img/sanders-map.png" />
+        </div> -->
+        <div class="col">
+            <img class="portrait" src="/static/img/anthony-pesce_crop.jpg" />
+            <div>
                 <a href="http://github.com/{{ site.github_username }}">
                     <img class="social" src="/static/img/github.png" />
                 </a>
@@ -13,45 +16,43 @@ layout: default
                     <img class="social" src="/static/img/twitter.jpg" />
                 </a>
             </div>
-            <div class="portrait-container-mobile">
-                <img class="portrait" src="{{ site.portrait }}" />
-            </div>
-            <div class="header">
-                <h1>{{ site.title }}</h1>
-                <p>{{ site.short_description }}</p>
-            </div>
+            <h1>{{ site.title }}</h1>
+
+            <p class="lead">Hello 👋 I'm a journalist and software engineer working on the <a target=_blank" href="https://github.com/datadesk">L.A. Times Data Desk</a>.</p>
+            
+            <p class="lead">I use machine learning to <a target=_blank" href="https://www.latimes.com/local/cityhall/la-me-crime-stats-20151015-story.html">report on crime statistics</a> and <a target=_blank" href="https://recipes.latimes.com/">parse recipes</a>, I publish <a target=_blank" href="https://www.latimes.com/projects/la-pol-na-us-general-election-results-2018/">live election results</a>, and I make maps of <a target=_blank" href="https://www.latimes.com/projects/la-na-pol-sanders-donors/">Bernie Sanders contributors</a> and the <a target=_blank" href="https://www.latimes.com/projects/la-fo-101-restaurants-we-love-map/">best restaurants in L.A.</a></p>
+            
+            <p class="lead">My work tends to focus on:</p>
+
+            <ul class="index list lead">
+            {% for section in page.sections %}
+                <li><a href="#{{ section.title }}">{{ section.title }}</a></li>
+            {% endfor %}
+            </ul>
         </div>
-    </header>
-    <div class="row three">
-        {% for project in page.lead_projects %}
-        <div class="one-third column">
-            <a href="{{ project.url }}">
-                <img src="{{ project.img }}" />
-            </a>
-            <a href="{{ project.url }}">
-                <h4>{{ project.headline }}</h4>
-            </a>
-            <a href="{{ project.url }}">
-                <p>{{ project.description }}</p>
-            </a>
-        </div>
-        {% endfor %}
     </div>
 </div>
-<h3 class="center">Selected Work</h3>
-<div class="container">
-    <div class="row">
-        <ul id="work-list" class="eight columns">
-        {% for project in page.other_projects %}
-            <li>
-            {% if project.img %}
-                <a href="{{ project.url }}">
-                    <img src="{{ project.img }}" />
-                </a>
-            {% endif %}
-                <a href="{{ project.url }}">{{ project.description }}</a>
-            </li>
-        {% endfor %}
-        </ul>
+
+<div class="container work">
+{% for section in page.sections %}
+    <div class="row" name="{{ section.title }}" id="{{ section.title }}">
+        <div class="col">
+            <h2>{{ section.title }}</h2>
+            <img class="section-img" src="{{ section.img }}" />
+        </div>
     </div>
+    <div class="row justify-content-center desc">
+        <div class="col-sm-6 lead">
+            <h5>Projects:</h5>
+            <ul class="list">
+            {% for project in section.work %}
+                <li><a target="_blank" href="{{ project.url }}">{{ project.name }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+        <div class="col-sm-4">
+            <p class="desc">{{ section.description }}</p>
+        </div>
+    </div>
+{% endfor %}
 </div>

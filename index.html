@@ -1,88 +1,60 @@
 ---
 layout: home
 
-lead_projects:
-    - img: /static/img/2016_election_maps.jpg
-      url: http://graphics.latimes.com/election-2016-massachusetts-results/
-      headline: 2016 Election Maps
-      description: 
-      
-    - img: /static/img/sanders_money.jpg
-      url: http://www.latimes.com/projects/la-na-pol-sanders-donors/
-      headline: Who gives money to Bernie Sanders?
-      description: 
-    
-    - img: /static/img/how_much_worth.jpg
-      url: http://static.latimes.com/how-much-are-they-worth/
-      headline: How many millionaires does California send to Congress?
-      description: 
+sections:
+    - title: Election results
+      img: /static/img/elex3.jpg
+      description: Publishing election results is a full stack process. On the back end, I write software to download, parse, and transform raw results from the Associated Press and <a target="_blank" href="https://github.com/datadesk/la-election-night">County of Los Angeles</a>. On the front end, I build maps and charts to visualize the results in real time. I also build live-updating widgets for the homescreen of latimes.com.
+      work:
+      - name: Results from the 2018 midterm elections
+        url: https://www.latimes.com/projects/la-pol-na-us-general-election-results-2018/
+      - name: How your neighborhood voted in the razor-thin L.A. County sheriff's race
+        url: https://www.latimes.com/projects/la-me-sheriff-election-map-2018/
+      - name: Results from California’s primary election
+        url: https://www.latimes.com/projects/la-pol-ca-california-primary-election-results-2018/
+      - name: L.A. County split on governor. How did your neighborhood vote?
+        url: https://www.latimes.com/projects/la-pol-ca-california-primary-la-precincts-2018/
+      - name: U.S. 2016 election results
+        url: http://graphics.latimes.com/la-na-pol-2016-election-results-national/
+      - name: How the race to the nomination was won
+        url: http://graphics.latimes.com/2016-election-delegates/
+      - name: Results from the Massachusetts primary
+        url: http://graphics.latimes.com/election-2016-massachusetts-results/
 
-other_projects:
-    - img: 
-      url: http://www.latimes.com/politics/la-na-0424-california-gop-donors-20160423-story.html
-      description: After wasting millions of dollars, California GOP donors close their checkbooks to presidential candidates
-    
-    - img:
-      url: http://www.latimes.com/nation/la-na-money-california-20150916-story.html
-      description: In Democratic California, which 2016 candidates get the most money? You'll be surprised
-    
-    - img: 
-      url: http://www.latimes.com/local/cityhall/la-me-crime-stats-20151015-story.html
-      description: LAPD underreported serious assaults, skewing crime stats for 8 years
-    
-    - img:
-      url: http://www.latimes.com/local/california/la-me-supes-money-20141025-story.html
-      description: L.A. County supervisorial race a money battle between labor, business
-    
-    - img: /static/img/super_tuesday.jpg
-      url: http://graphics.latimes.com/2016-election-super-tuesday-results/
-      description: Super Tuesday election results
-    
-    - img: /static/img/delegate_tracker.jpg
-      url: http://graphics.latimes.com/2016-election-delegates/
-      description: 2016 Primary Delegate Tracker
-    
-    - img: /static/img/california_millionaires.gif
-      url: http://graphics.latimes.com/2016-election-big-donors/
-      description: Who are the millionaires bankrolling the 2016 presidential race?
-    
-    - img:
-      url: http://graphics.latimes.com/2016-election-entertainment-donors/
-      description: The Hollywood heavyweights funding the 2016 presidential fight
-    
-    - img: /static/img/five_facts.jpg
-      url: http://graphics.latimes.com/2016-election-california-money/
-      description: Five facts about the California cash fueling the 2016 race
-    
-    - img:
-      url: http://graphics.latimes.com/usmap-gay-marriage-chronology/
-      description: "Timeline: Gay marriage chronology"
-    
-    - img:
-      url: http://graphics.latimes.com/la-general-election-results-2015/
-      description: 2015 Los Angeles city general election results
-    
-    - img:
-      url: http://graphics.latimes.com/la-me-labor-supes/
-      description: "Money in politics: Track the special interest spending fueling this year's local campaigns"
-    
-    - img:
-      url: http://graphics.latimes.com/2014-election-results-senate/
-      description: "Election results: Seats that could swing the U.S. Senate"
-    
-    - img:
-      url: http://graphics.latimes.com/2014-election-results-california-statehouse/
-      description: "Election results: California state Assembly and Senate"
-    
-    - img: /static/img/build_your_california.jpg
-      url: http://ilivehere.latimes.com/build-your-california/
-      description: Would you break up the Golden State? Build your own
-    
-    - img: /static/img/i_live_here.jpg
-      url: http://ilivehere.latimes.com/los-feliz/
-      description: Los Angeles and Orange County, tell us who you are
-    
-    - img: /static/img/california_cookbook.jpg
-      url: http://recipes.latimes.com/
-      description: Los Angeles Times California Cookbook and Recipes Database
+    - title: Campaign finance
+      img: /static/img/camp-fi.jpg
+      description: Campaign finance records can come from the Federal Election Commission, the California Secretary of State, Los Angeles City, Los Angeles County and more! I write software to download and clean campaign finance records in bulk &mdash; then I write more code to clean up business names and occupations, classify the contributions into sectors, and group individual donors.
+      work:
+      - name: Who gives money to Bernie Sanders?
+        url: https://www.latimes.com/projects/la-na-pol-sanders-donors/
+      - name: After wasting millions of dollars, California GOP donors close their checkbooks to presidential candidates
+        url: https://www.latimes.com/politics/la-na-0424-california-gop-donors-20160423-story.html
+      - name: In Democratic California, which 2016 candidates get the most money?
+        url: https://www.latimes.com/nation/la-na-money-california-20150916-story.html
+      - name: Who are the millionaires bankrolling the 2016 presidential race?
+        url: http://graphics.latimes.com/2016-election-big-donors/
+
+    - title: Recipes & restaurants
+      img: /static/img/food.jpg
+      description: I <a href="http://datadesk.latimes.com/posts/2013/12/natural-language-processing-in-the-kitchen/">wrote software</a> to dive into the L.A. Times archives and pull out structured recipe data. Then, I built the California Cookbook recipes database from back end to front end.
+      work:
+      - name: 101 Restaurants We Love
+        url: https://www.latimes.com/projects/la-fo-101-restaurants-we-love/
+      - name: Map &mdash; 101 Restaurants We Love
+        url: https://www.latimes.com/projects/la-fo-101-restaurants-we-love-map/
+      - name: California Cookbook & recipes database
+        url: https://recipes.latimes.com/
+
+    - title: Social engagement
+      img: /static/img/neighborhoods.jpg
+      description: "These projects often start with a question from a colleague: Can we make a Mad Libs for L.A. neighborhoods? How are our readers feeling about the political environment? After some brainstorming, my team finds a creative way to connect with our readers."
+      work:
+      - name: Build your own California
+        url: https://www.latimes.com/projects/la-pol-ca-build-your-own-california/
+      - name: How do you feel about America right now? Make your own sign.
+        url: https://www.latimes.com/projects/draw-your-sign/
+      - name: The 2nd Amendment is 145 characters. How would you rewrite it?
+        url: https://www.latimes.com/projects/la-na-what-should-the-second-amendment-say/
+      - name: Los Feliz, define your neighborhood
+        url: http://ilivehere.latimes.com/los-feliz/
 ---
