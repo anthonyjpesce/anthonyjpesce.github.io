@@ -3,27 +3,20 @@ layout: default
 ---
 <div class="container topper">
     <div class="row">
-<!--         <div class="col-7">
-            <img class="topper-img" src="/static/img/sanders-map.png" />
-        </div> -->
         <div class="col">
             <img class="portrait" src="/static/img/anthony-pesce_crop.jpg" />
             <div>
-                <a href="http://github.com/{{ site.github_username }}">
+                <a target="_blank" href="http://github.com/{{ site.github_username }}">
                     <img class="social" src="/static/img/github.png" />
                 </a>
-                <a href="http://twitter.com/{{ site.twitter_username }}">
+                <a target="_blank" href="http://twitter.com/{{ site.twitter_username }}">
                     <img class="social" src="/static/img/twitter.jpg" />
                 </a>
             </div>
             <h1>{{ site.title }}</h1>
-
-            <p class="lead">Hello 👋 I'm a journalist and software engineer working on the <a target=_blank" href="https://github.com/datadesk">L.A. Times Data Desk</a>.</p>
-            
-            <p class="lead">I use machine learning to <a target=_blank" href="https://www.latimes.com/local/cityhall/la-me-crime-stats-20151015-story.html">report on crime statistics</a> and <a target=_blank" href="https://recipes.latimes.com/">parse recipes</a>, I publish <a target=_blank" href="https://www.latimes.com/projects/la-pol-na-us-general-election-results-2018/">live election results</a>, and I make maps of <a target=_blank" href="https://www.latimes.com/projects/la-na-pol-sanders-donors/">Bernie Sanders contributors</a> and the <a target=_blank" href="https://www.latimes.com/projects/la-fo-101-restaurants-we-love-map/">best restaurants in L.A.</a></p>
-            
+            <p class="lead">Hello 👋 I'm a journalist and software engineer working on the <a target="_blank" href="https://github.com/datadesk">L.A. Times Data Desk</a>.</p>
+            <p class="lead">I use machine learning to <a target="_blank" href="https://www.latimes.com/local/cityhall/la-me-crime-stats-20151015-story.html">report on crime statistics</a> and <a target="_blank" href="https://recipes.latimes.com/">parse recipes</a>, I publish <a target="_blank" href="https://www.latimes.com/projects/la-pol-na-us-general-election-results-2018/">live election results</a>, and I make maps of <a target="_blank" href="https://www.latimes.com/projects/la-na-pol-sanders-donors/">Bernie Sanders contributors</a> and the <a target="_blank" href="https://www.latimes.com/projects/la-fo-101-restaurants-we-love-map/">best restaurants in L.A.</a></p>
             <p class="lead">My work tends to focus on:</p>
-
             <ul class="index list lead">
             {% for section in page.sections %}
                 <li><a href="#{{ section.title }}">{{ section.title }}</a></li>
@@ -32,7 +25,6 @@ layout: default
         </div>
     </div>
 </div>
-
 <div class="container work">
 {% for section in page.sections %}
     <div class="row" name="{{ section.title }}" id="{{ section.title }}">

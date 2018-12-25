@@ -12,14 +12,7 @@ body {
 .footer {
     margin-top: 40px;
 }
-.container.topper {
-    max-width: none;
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-    margin-bottom: 40px;
-}
-.container.topper .row {
+.container.topper .row, .container.topper .col {
     margin: 0px;
     padding: 0px;
 }
@@ -124,12 +117,31 @@ header p {
     text-align: center;
 }
 
-@media (min-width: 750px) {
+@media (min-width: 767px) {
     h1 {
         font-size: 52px;
     }
     header p {
         font-size: 25px;
+    }
+    .container.topper {
+        max-width: none;
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    p.desc {
+        margin-top: 0px !important;
+    }
+    .work .row {
+        margin-bottom:25px;
+    }
+    h2 {
+        font-size: 1.8rem;
     }
 }
 
