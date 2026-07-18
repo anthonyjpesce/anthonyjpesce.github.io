@@ -1,60 +1,248 @@
----
-layout: home
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anthony Pesce</title>
+  <meta name="description" content="Anthony Pesce — Director of U.S. Elections at Reuters. Formerly The Washington Post and the Los Angeles Times.">
+  <meta property="og:title" content="Anthony Pesce">
+  <meta property="og:description" content="Director of U.S. Elections at Reuters. Formerly The Washington Post and the Los Angeles Times.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://anthonypesce.com">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    html, body { margin: 0; padding: 0; }
+    body { background: #56685a; }
+    a { color: #56685a; }
+    a:hover { color: #2a2d28; }
+    ::selection { background: #2a2d28; color: #fbfaf6; }
 
-sections:
-    - title: Election results
-      img: /static/img/elex3.jpg
-      description: Publishing election results is a full stack process. On the back end, I write software to download, parse, and transform raw results from the Associated Press and <a target="_blank" href="https://github.com/datadesk/la-election-night">County of Los Angeles</a>. On the front end, I build maps and charts to visualize the results in real time. I also build live-updating widgets for the homescreen of latimes.com.
-      work:
-      - name: Results from the 2018 midterm elections
-        url: https://www.latimes.com/projects/la-pol-na-us-general-election-results-2018/
-      - name: How your neighborhood voted in the razor-thin L.A. County sheriff's race
-        url: https://www.latimes.com/projects/la-me-sheriff-election-map-2018/
-      - name: Results from California’s primary election
-        url: https://www.latimes.com/projects/la-pol-ca-california-primary-election-results-2018/
-      - name: L.A. County split on governor. How did your neighborhood vote?
-        url: https://www.latimes.com/projects/la-pol-ca-california-primary-la-precincts-2018/
-      - name: U.S. 2016 election results
-        url: http://graphics.latimes.com/la-na-pol-2016-election-results-national/
-      - name: How the race to the nomination was won
-        url: http://graphics.latimes.com/2016-election-delegates/
-      - name: Results from the Massachusetts primary
-        url: http://graphics.latimes.com/election-2016-massachusetts-results/
+    .page {
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+      min-height: 100dvh;
+      background: radial-gradient(ellipse 120vw 90vh at 50% 20%, #6b7d6d 0%, #56685a 70%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 24px;
+      box-sizing: border-box;
+    }
 
-    - title: Campaign finance
-      img: /static/img/camp-fi.jpg
-      description: Campaign finance records can come from the Federal Election Commission, the California Secretary of State, Los Angeles City, Los Angeles County and more! I write software to download and clean campaign finance records in bulk &mdash; then I write more code to clean up business names and occupations, classify the contributions into sectors, and group individual donors.
-      work:
-      - name: Who gives money to Bernie Sanders?
-        url: https://www.latimes.com/projects/la-na-pol-sanders-donors/
-      - name: After wasting millions of dollars, California GOP donors close their checkbooks to presidential candidates
-        url: https://www.latimes.com/politics/la-na-0424-california-gop-donors-20160423-story.html
-      - name: In Democratic California, which 2016 candidates get the most money?
-        url: https://www.latimes.com/nation/la-na-money-california-20150916-story.html
-      - name: Who are the millionaires bankrolling the 2016 presidential race?
-        url: http://graphics.latimes.com/2016-election-big-donors/
+    .pool {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .pool-moss {
+      left: -10%;
+      top: -20%;
+      width: 70vw;
+      height: 70vw;
+      background: radial-gradient(circle, rgba(168,190,168,0.16) 0%, rgba(168,190,168,0) 60%);
+      animation: bgDrift 70s ease-in-out infinite;
+    }
+    .pool-dark {
+      right: -15%;
+      bottom: -25%;
+      width: 75vw;
+      height: 75vw;
+      background: radial-gradient(circle, rgba(30,42,33,0.28) 0%, rgba(30,42,33,0) 60%);
+      animation: bgDrift2 80s ease-in-out infinite;
+    }
 
-    - title: Recipes & restaurants
-      img: /static/img/food.jpg
-      description: I <a href="http://datadesk.latimes.com/posts/2013/12/natural-language-processing-in-the-kitchen/">wrote software</a> to dive into the L.A. Times archives and pull out structured recipe data. Then, I built the California Cookbook recipes database from back end to front end.
-      work:
-      - name: 101 Restaurants We Love
-        url: https://www.latimes.com/projects/la-fo-101-restaurants-we-love/
-      - name: Map &mdash; 101 Restaurants We Love
-        url: https://www.latimes.com/projects/la-fo-101-restaurants-we-love-map/
-      - name: California Cookbook & recipes database
-        url: https://recipes.latimes.com/
+    .card-wrap { transform-origin: 50% 50%; }
 
-    - title: Social engagement
-      img: /static/img/neighborhoods.jpg
-      description: "These projects often start with a question from a colleague: Can we make a Mad Libs for L.A. neighborhoods? How are our readers feeling about the political environment? After some brainstorming, my team finds a creative way to connect with our readers."
-      work:
-      - name: Build your own California
-        url: https://www.latimes.com/projects/la-pol-ca-build-your-own-california/
-      - name: How do you feel about America right now? Make your own sign.
-        url: https://www.latimes.com/projects/draw-your-sign/
-      - name: The 2nd Amendment is 145 characters. How would you rewrite it?
-        url: https://www.latimes.com/projects/la-na-what-should-the-second-amendment-say/
-      - name: Los Feliz, define your neighborhood
-        url: http://ilivehere.latimes.com/los-feliz/
----
+    .card {
+      position: relative;
+      background: linear-gradient(178deg, #fbfaf6, #f1efe7);
+      color: #2a2d28;
+      width: 360px;
+      padding: 54px 34px 64px;
+      box-sizing: border-box;
+      border-radius: 5px;
+      box-shadow: 0 30px 50px -14px rgba(20,26,21,0.55), 0 10px 20px -12px rgba(20,26,21,0.35);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      font-family: 'EB Garamond', Georgia, serif;
+      animation: cardIn 700ms ease both;
+    }
+
+    .frame {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    .frame rect {
+      width: calc(100% - 30px);
+      height: calc(100% - 30px);
+    }
+
+    .mark {
+      width: 58px;
+      height: 58px;
+      position: relative;
+    }
+
+    .name {
+      margin: 22px 0 0;
+      font-size: 32px;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .divider {
+      width: 40px;
+      height: 8px;
+      margin: 13px 0;
+      position: relative;
+    }
+
+    .role {
+      margin: 0;
+      font-family: 'Libre Franklin', Helvetica, sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      line-height: 2;
+      color: rgba(42,45,40,0.78);
+      position: relative;
+    }
+
+    .formerly {
+      margin: 13px 0 0;
+      font-size: 15.5px;
+      font-style: italic;
+      color: rgba(42,45,40,0.6);
+      line-height: 1.5;
+      position: relative;
+    }
+
+    .links {
+      display: flex;
+      gap: 10px;
+      margin-top: 14px;
+      font-family: 'Libre Franklin', Helvetica, sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      position: relative;
+    }
+    .links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 0 8px;
+      color: #4c5c50;
+      text-decoration: none;
+    }
+    .links a:hover { color: #2a2d28; }
+    .links a:focus-visible {
+      outline: 2px solid #56685a;
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+    .links a span {
+      border-bottom: 1px solid color-mix(in srgb, currentColor 45%, transparent);
+      padding-bottom: 2px;
+    }
+
+    @keyframes cardIn {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: none; }
+    }
+    @keyframes bgDrift {
+      0% { transform: translate(-6%, -4%); }
+      25% { transform: translate(5%, -9%); }
+      50% { transform: translate(9%, 5%); }
+      75% { transform: translate(-5%, 7%); }
+      100% { transform: translate(-6%, -4%); }
+    }
+    @keyframes bgDrift2 {
+      0% { transform: translate(7%, 5%); }
+      33% { transform: translate(-7%, 9%); }
+      66% { transform: translate(-9%, -5%); }
+      100% { transform: translate(7%, 5%); }
+    }
+
+    @media (max-width: 420px) { .card-wrap { transform: scale(0.86); } }
+    @media (max-width: 360px) { .card-wrap { transform: scale(0.78); } }
+    @media (prefers-reduced-motion: reduce) {
+      .card, .pool { animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="pool pool-moss"></div>
+    <div class="pool pool-dark"></div>
+    <div class="card-wrap">
+      <main class="card">
+        <svg class="frame" aria-hidden="true">
+          <defs>
+            <filter id="blindFrame" x="-30%" y="-30%" width="160%" height="160%">
+              <feFlood flood-color="#dcd8ca" result="base"></feFlood>
+              <feComposite in="base" in2="SourceAlpha" operator="in" result="shape"></feComposite>
+              <feOffset in="SourceAlpha" dy="1.6" result="o1"></feOffset>
+              <feGaussianBlur in="o1" stdDeviation="0.9" result="b1"></feGaussianBlur>
+              <feComposite in="SourceAlpha" in2="b1" operator="out" result="ts"></feComposite>
+              <feFlood flood-color="rgba(58,62,52,0.5)" result="dk"></feFlood>
+              <feComposite in="dk" in2="ts" operator="in" result="idk"></feComposite>
+              <feOffset in="SourceAlpha" dy="-1.1" result="o2"></feOffset>
+              <feGaussianBlur in="o2" stdDeviation="0.6" result="b2"></feGaussianBlur>
+              <feComposite in="SourceAlpha" in2="b2" operator="out" result="bs"></feComposite>
+              <feFlood flood-color="rgba(255,255,255,0.5)" result="lt"></feFlood>
+              <feComposite in="lt" in2="bs" operator="in" result="ilt"></feComposite>
+              <feMerge><feMergeNode in="shape"></feMergeNode><feMergeNode in="idk"></feMergeNode><feMergeNode in="ilt"></feMergeNode></feMerge>
+            </filter>
+            <filter id="blindMark" x="-30%" y="-30%" width="160%" height="160%">
+              <feFlood flood-color="#dcd8ca" result="base"></feFlood>
+              <feComposite in="base" in2="SourceAlpha" operator="in" result="shape"></feComposite>
+              <feOffset in="SourceAlpha" dy="3" result="o1"></feOffset>
+              <feGaussianBlur in="o1" stdDeviation="1.7" result="b1"></feGaussianBlur>
+              <feComposite in="SourceAlpha" in2="b1" operator="out" result="ts"></feComposite>
+              <feFlood flood-color="rgba(58,62,52,0.5)" result="dk"></feFlood>
+              <feComposite in="dk" in2="ts" operator="in" result="idk"></feComposite>
+              <feOffset in="SourceAlpha" dy="-2" result="o2"></feOffset>
+              <feGaussianBlur in="o2" stdDeviation="1.1" result="b2"></feGaussianBlur>
+              <feComposite in="SourceAlpha" in2="b2" operator="out" result="bs"></feComposite>
+              <feFlood flood-color="rgba(255,255,255,0.5)" result="lt"></feFlood>
+              <feComposite in="lt" in2="bs" operator="in" result="ilt"></feComposite>
+              <feMerge><feMergeNode in="shape"></feMergeNode><feMergeNode in="idk"></feMergeNode><feMergeNode in="ilt"></feMergeNode></feMerge>
+            </filter>
+          </defs>
+          <rect x="15" y="15" rx="2" fill="none" stroke="#dcd8ca" stroke-width="2" filter="url(#blindFrame)"></rect>
+        </svg>
+        <svg class="mark" viewBox="-6 -6 112 112" role="img" aria-label="Anthony Pesce maker's mark">
+          <g filter="url(#blindMark)">
+            <rect x="4" y="4" width="92" height="92" rx="13" fill="none" stroke="#dcd8ca" stroke-width="9" stroke-linejoin="round"></rect>
+            <g transform="translate(50 50) scale(0.6) translate(-52 -45)" fill="none" stroke="#dcd8ca" stroke-width="13.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="28" y1="5" x2="28" y2="86"></line>
+              <line x1="76" y1="28" x2="76" y2="86"></line>
+              <path d="M 28 28 A 24 24 0 0 1 76 28"></path>
+              <line x1="28" y1="42" x2="74" y2="42"></line>
+            </g>
+          </g>
+        </svg>
+        <h1 class="name">Anthony Pesce</h1>
+        <svg class="divider" viewBox="0 0 40 8" aria-hidden="true"><rect x="2" y="3" width="36" height="2" rx="1" fill="#dcd8ca" filter="url(#blindFrame)"></rect></svg>
+        <p class="role">DIRECTOR OF U.S. ELECTIONS<br>REUTERS</p>
+        <p class="formerly">Formerly The Washington Post<br>&amp; the Los Angeles Times</p>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/anthonyjpesce/"><span>LINKEDIN</span></a>
+          <a href="https://github.com/anthonyjpesce"><span>GITHUB</span></a>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
