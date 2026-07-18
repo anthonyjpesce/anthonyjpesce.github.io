@@ -9,6 +9,10 @@
   <meta property="og:description" content="Director of U.S. Elections at Reuters. Formerly The Washington Post and the Los Angeles Times.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://anthonypesce.com">
+  <meta property="og:image" content="https://anthonypesce.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="/assets/favicon.png">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -101,9 +105,9 @@
     }
 
     .divider {
-      width: 40px;
+      width: 58px;
       height: 8px;
-      margin: 13px 0;
+      margin: 19px 0 18px;
       position: relative;
     }
 
@@ -152,8 +156,13 @@
       border-radius: 2px;
     }
     .links a span {
-      border-bottom: 1px solid color-mix(in srgb, currentColor 45%, transparent);
+      border-bottom: 1px solid transparent;
       padding-bottom: 2px;
+      transition: border-color 150ms ease;
+    }
+    .links a:hover span,
+    .links a:focus-visible span {
+      border-bottom-color: color-mix(in srgb, currentColor 45%, transparent);
     }
 
     @keyframes cardIn {
@@ -234,7 +243,7 @@
           </g>
         </svg>
         <h1 class="name">Anthony Pesce</h1>
-        <svg class="divider" viewBox="0 0 40 8" aria-hidden="true"><rect x="2" y="3" width="36" height="2" rx="1" fill="#dcd8ca" filter="url(#blindFrame)"></rect></svg>
+        <svg class="divider" viewBox="0 0 58 8" aria-hidden="true"><rect x="2" y="3" width="54" height="2" rx="1" fill="#dcd8ca" filter="url(#blindFrame)"></rect></svg>
         <p class="role">DIRECTOR OF U.S. ELECTIONS<br>REUTERS</p>
         <p class="formerly">Formerly The Washington Post<br>&amp; the Los Angeles Times</p>
         <div class="links">
